@@ -159,7 +159,7 @@ impl InstallationAccessToken {
             token: raw.token,
             expires_at: raw.expires_at,
             params,
-            refresh_safety_margin: Duration::minutes(1),
+            refresh_safety_margin: Duration::try_minutes(1).unwrap(),
         })
     }
 
